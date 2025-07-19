@@ -1,0 +1,149 @@
+:root {
+  --bg-dark: linear-gradient(45deg, #240156, #05001c);
+  --bg-light: linear-gradient(45deg, #d1d1f1, #ffffff);
+  --card-dark: #ffffff;
+  --card-light: #f5f5ff;
+  --text-dark: #ffffff;
+  --text-light: #111111;
+  --primary: #5709ee;
+  --secondary: #7a37bf;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  transition: background 0.5s, color 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px 10px;
+}
+
+#city-name {
+  font-size: 50px;
+  margin: 0;
+}
+
+#date {
+  font-size: 20px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  width: 180px;
+  background-color: var(--card-dark);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+body.light .card {
+  background-color: var(--card-light);
+}
+
+.header {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.time {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0;
+  color: #0e012d;
+  /* default for dark mode */
+}
+
+body.light .time {
+  color: #000;
+  /* visible on light background */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+select {
+  width: 250px;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 20px;
+  font-family: Roboto;
+  margin-top: 20px;
+}
+
+#next-prayer-name,
+#countdown {
+  text-align: center;
+  margin: 10px;
+}
+
+#countdown {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #city-name {
+    font-size: 40px;
+  }
+
+  .card {
+    width: 42%;
+  }
+
+  .time {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+  }
+
+  select {
+    width: 90%;
+  }
+
+  #countdown {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+</head>
+
+<body class="dark">
+    <button class="toggle-btn" onclick="toggleTheme()">Switch Mode</button>
+
+    <header>
+        <h1 id="city-name">Cairo</h1>
+        <h3 id="date">Loading date...</h3>
+    </header>
+
+    <hr style="border-color:#5200e1; margin: 0 30px" />
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="header">
+                <h3>Fajr</h3>
+            </div>
+            <div class="time" id="fajr-time">--:--</div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h3>Sunrise</h3>
+            </div>
+            <div class="time" id="sunrise-time">--:--</div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h3>Dhuhr</h3>
+            </div>
+            <div class="time" id="dhuhr-time">--:--</div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h3>Asr</h3>
+            </div>
+            <div class="time" id="asr-time">--:--</div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h3>Maghrib</h3>
+            </div>
+            <div class="time" id="maghreb-time">--:--</div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h3>Isha</h3>
+            </div>
+            <div class="time" id="isha'a-time">--:--</div>
+        </div>
+    </div>
+
+    <div class="center" style="margin: 20px;">
+        <h2 id="next-prayer-name">Next Prayer: --</h2>
+        <h1 id="countdown">--:--:--</h1>
+        <select id="cities-select">
+            <option disabled selected>Select City</option>
+        </select>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
